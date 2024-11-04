@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_windowmanager_example/main.dart';
+import '../lib/main.dart';
 
 void main() {
   testWidgets('Verify Secure Mode', (WidgetTester tester) async {
@@ -19,7 +19,7 @@ void main() {
     expect(
       find.byWidgetPredicate(
         (Widget widget) =>
-            widget is Text && widget.data.startsWith('Secure Mode:'),
+            widget is Text && widget.data!.startsWith('Secure Mode:'),
       ),
       findsOneWidget,
     );
